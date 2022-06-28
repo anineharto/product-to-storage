@@ -63,3 +63,9 @@ class DataTransformer:
         
         with open(self.interim_data_file_path, "rb") as data_to_upload:
             blob_client.upload_blob(data_to_upload, overwrite=True)
+
+if __name__ == "__main__":
+    data_transformer = DataTransformer()
+    data_transformer.download_data_from_raw_blob()
+    data_transformer.convert_raw_data_to_csv()
+    data_transformer.upload_transformed_data_to_interim_blob()

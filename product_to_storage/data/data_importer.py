@@ -20,3 +20,6 @@ class DataImporter:
         data = requests.get(os.getenv("DATA_API_NAME")).json()
         data_to_upload = json.dumps(data)
         blob_client.upload_blob(data_to_upload, overwrite=True)
+
+if __name__ == "__main__":
+    DataImporter().upload_data_to_raw_blob()
