@@ -6,6 +6,10 @@ authors = ["Anine Harto <anine.harto@accenture.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+requests = "^2.28.0"
+azure-storage-blob = "^12.12.0"
+python-dotenv = "^0.20.0"
+tqdm = "^4.64.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
